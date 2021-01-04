@@ -1,5 +1,5 @@
-import testDemo from './test-demo/function.js';
+const mMyInstanceof = require('./my-instanceof/function.js');
 
-export default {
-  testDemo,
+module.exports = {
+  mMyInstanceof,
 };

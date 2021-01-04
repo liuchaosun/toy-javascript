@@ -1,7 +1,7 @@
 {
   "name": "toy-javascript",
   "version": "0.1.0",
-  "description": "",
+  "description": "自己动手实现一些 js 基础知识",
   "private": true,
   "scripts": {
     "test": "nyc mocha",

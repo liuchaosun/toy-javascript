@@ -3,6 +3,8 @@
     "@babel/preset-env"
   ],
   "plugins": [
+    // 配合 nyc istanbuljs 解决 node 导出需要使用 module.export 的问题
+    // 现在你可以使用 esModule
     "babel-plugin-istanbul",
     "@babel/plugin-transform-runtime",
     "@babel/plugin-transform-object-assign"
