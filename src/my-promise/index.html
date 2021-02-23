@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./index.js"></script>
+  </head>
+  <body></body>
+  <script>
+    setTimeout(() => {
+      console.log('宏任务执行了');
+    });
+    // 用法
+    let a = new MyPromise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(p);
+        // resolve('解决');
+        // reject('拒绝');
+      }, 1000);
+      // resolve(p);
+      // reject('拒绝');
+      console.log(1);
+    }).then(
+      (value) => {
+        console.log(value);
+      },
+      (value) => {
+        console.log(value);
+      }
+    );
+
+    let b = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        // resolve(p);
+        // reject('拒绝2');
+      }, 1000);
+      // resolve(p);
+      // reject('拒绝2');
+      console.log(2);
+    }).then(
+      (value) => {
+        console.log(value);
+      },
+      (value) => {
+        console.log(value);
+      }
+    );
+
+    function test() {
+      try {
+        setTimeout(() => {
+          try {
+            throw new Error('can you catch me!!!');
+          } catch (error) {
+            console.log(111);
+          }
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  </script>
+</html>
